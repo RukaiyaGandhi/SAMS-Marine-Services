@@ -1,0 +1,182 @@
+/*==============================
+Google Fonts
+==============================*/
+
+:root {
+  --primary: #1a1487;
+  --secondary: #be1111;
+  --accent: #9e9e9e;
+
+  --dark: #1f2937;
+  --light: #f8f9fa;
+  --white: #ffffff;
+
+  --heading: #0f172a;
+  --text: #64748b;
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  --transition: 0.4s ease;
+}
+
+/*==============================
+Global
+==============================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--text);
+  background: #fff;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  color: var(--heading);
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+/*==============================
+Top Bar
+==============================*/
+
+.top-bar {
+  background: var(--primary);
+
+  color: #fff;
+
+  font-size: 14px;
+}
+
+.top-bar i {
+  color: #fff;
+
+  margin-right: 6px;
+}
+
+.top-bar span {
+  display: flex;
+
+  align-items: center;
+}
+
+/*==============================
+Navbar
+==============================*/
+
+.navbar {
+  padding: 15px 0;
+}
+
+.company-name {
+  color: var(--primary);
+  font-size: 20px;
+}
+
+.company-tagline {
+  color: var(--secondary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link {
+  color: var(--heading);
+  font-weight: 600;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--secondary);
+}
+
+.btn-danger {
+  background: var(--secondary);
+  border: none;
+  border-radius: 50px;
+  padding: 10px 25px;
+}
+
+.btn-danger:hover {
+  background: var(--primary);
+}
+
+/*==============================
+Hero Section
+==============================*/
+
+.hero {
+  background: url("../images/hero/hero-bg.jpg") center center/cover no-repeat;
+
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.hero-tag {
+  color: #fff;
+
+  letter-spacing: 2px;
+
+  font-weight: 600;
+
+  border-left: 4px solid var(--secondary);
+
+  padding-left: 15px;
+}
+
+.hero-title {
+  color: #fff;
+
+  font-size: 60px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+.hero-text {
+  color: #ddd;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  max-width: 650px;
+}
+
+.btn-outline-light {
+  border-radius: 50px;
+
+  padding: 10px 25px;
+}
