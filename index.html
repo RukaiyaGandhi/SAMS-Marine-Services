@@ -1,201 +1,1282 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Meta Tags -->
+    <!-- Meta -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="SAMS Marine Services" />
 
-    <title>SAMS Marine Services</title>
+    <!-- Title -->
+    <title>
+      SAMS Marine Services | Marine Compressor Repair, Spare Parts & Technical
+      Services
+    </title>
 
+    <!-- SEO -->
     <meta
       name="description"
-      content="SAMS Marine Services provides professional marine compressor servicing, marine spare parts supply, onboard technical services, and engineering solutions worldwide."
+      content="SAMS Marine Services provides marine compressor overhauling, genuine spare parts, onboard technical support, refrigeration compressor repair, workshop services and marine engineering solutions worldwide."
     />
+    <meta name="theme-color" content="#0B1F3A" />
 
-    <meta
-      name="keywords"
-      content="Marine Services, Compressor Overhauling, Marine Spare Parts, Ship Repair, Marine Engineering"
-    />
-
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-
-    <!-- Bootstrap Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logo/LOGO.jpeg" type="image/x-icon" />
 
     <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- Custom CSS -->
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <link rel="canonical" href="https://www.samsmarineservices.in/" />
   </head>
-
   <body>
-    <!-- Content Starts Here -->
+    <!-- ==========================================
+                    PRELOADER
+    =========================================== -->
 
-    <!-- ===========================
-Top Bar Start
-=========================== -->
+    <div class="preloader">
+      <div class="loader"></div>
+    </div>
 
-    <div class="top-bar py-2">
+    <!-- ==========================================
+                    BACK TO TOP
+    =========================================== -->
+
+    <a href="#" class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- =========================
+     TOP BAR START
+========================== -->
+    <div class="top-bar">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-8">
-            <div class="d-flex flex-wrap gap-4">
-              <span>
-                <i class="bi bi-telephone-fill"></i>
-
-                +91 9558588452
-              </span>
-
-              <span>
-                <i class="bi bi-envelope-fill"></i>
-
-                supply@samsmarineservices.in
-              </span>
-            </div>
+        <!-- Left -->
+        <div class="topbar-left">
+          <div class="topbar-item">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+919558588452">+91 95585 88452</a>
           </div>
 
-          <div class="col-lg-4 text-lg-end mt-2 mt-lg-0">
-            <span>
-              <i class="bi bi-clock-fill"></i>
+          <div class="topbar-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:supply@samsmarineservices.in">
+              supply@samsmarineservices.in
+            </a>
+          </div>
+        </div>
 
-              24×7 Marine Technical Support
-            </span>
+        <!-- Right -->
+        <div class="topbar-right">
+          <div class="topbar-item">
+            <i class="far fa-clock"></i>
+            <span>24 × 7 Marine Technical Support</span>
+          </div>
+
+          <div class="topbar-social">
+            <a href="#" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a href="#" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
           </div>
         </div>
       </div>
     </div>
+    <!-- =========================
+     TOP BAR END
+========================== -->
+<!-- ==================================================
+     HEADER START
+================================================== -->
+<header class="site-header">
 
-    <!-- ===========================
-Top Bar End
-=========================== -->
-    <!-- ===========================
-Navbar Start
-=========================== -->
+    <nav class="navbar" aria-label="Primary Navigation">
 
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img
-            src="assets/images/logo/LOGO.jpeg"
-            alt="SAMS Marine Services Logo"
-            width="60"
-            class="me-2"
-          />
+        <div class="container">
 
-          <div>
-            <h5 class="mb-0 fw-bold company-name">SAMS Marine Services</h5>
+            <!-- =========================
+                 BRAND
+            ========================== -->
+            <div class="brand">
 
-            <small class="company-tagline">
-              Offshore | Onshore | Onboard
-            </small>
-          </div>
-        </a>
+                <a href="index.html" class="logo">
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbar"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+                    <img src="assets/images/logo/LOGO.jpeg"
+                        alt="SAMS Marine Services Logo">
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbar">
-          <ul class="navbar-nav align-items-lg-center">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
-            </li>
+                </a>
 
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
+                <div class="brand-info">
 
-            <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
-            </li>
+                    <h1 class="company-name">
+                        SAMS Marine Services
+                    </h1>
 
-            <li class="nav-item">
-              <a class="nav-link" href="products.html">Products</a>
-            </li>
+                    <span class="company-tagline">
+                        OFFSHORE | ONSHORE | ONBOARD
+                    </span>
 
-            <li class="nav-item">
-              <a class="nav-link" href="industries.html">Industries</a>
-            </li>
+                </div>
 
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
+            </div>
 
-            <li class="nav-item ms-lg-3">
-              <a href="quote.html" class="btn btn-danger px-4">
-                Request Quote
-              </a>
-            </li>
-          </ul>
+            <!-- =========================
+                 NAVIGATION
+            ========================== -->
+            <ul class="nav-menu">
+
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">
+                        Services
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="products.html" class="nav-link">
+                        Products
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="industries.html" class="nav-link">
+                        Industries
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- =========================
+                 RIGHT SIDE
+            ========================== -->
+            <div class="nav-actions">
+
+                <a href="request-quote.html" class="btn btn-primary">
+
+                    Request Quote
+
+                </a>
+              <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation"> 
+                <span></span>
+                 <span></span>
+                  <span></span>
+              </button>
+            </div>
+
         </div>
-      </div>
+
     </nav>
 
-    <!-- ===========================
- Navbar End
-=========================== -->
+</header>
+<!-- ==================================================
+     HEADER END
+================================================== -->
 
-    <!-- ===========================
-Hero Section Start
-=========================== -->
+<!-- ==================================================
+     HERO SECTION START
+================================================== -->
+<section class="hero" id="home">
 
-    <section class="hero">
-      <div class="hero-overlay">
+    <!-- Hero Background Overlay -->
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+
+        <div class="hero-wrapper">
+
+            <!-- =========================
+                 HERO CONTENT
+            ========================== -->
+            <div class="hero-content">
+
+                <span class="hero-tag">
+                    <i class="fas fa-anchor"></i>
+                    OFFSHORE • ONSHORE • ONBOARD
+                </span>
+
+                <h1 class="hero-title">
+                    Trusted Marine Compressor Repair,
+                    Overhauling & Technical Services
+                </h1>
+
+                <p class="hero-description">
+
+                    Established in 2012, <strong>SAMS Marine Services</strong>
+                    provides professional marine compressor overhauling,
+                    genuine OEM spare parts supply, onboard technical support,
+                    and engineering solutions that help ship owners,
+                    ship managers, and marine operators reduce downtime,
+                    improve operational reliability, and maintain
+                    safe vessel performance.
+
+                </p>
+
+                <!-- Hero Buttons -->
+                <div class="hero-buttons">
+
+                    <a href="request-quote.html"
+                       class="btn btn-primary">
+
+                        Request Quote
+
+                    </a>
+
+                    <a href="#services"
+                       class="btn btn-outline">
+
+                        Explore Services
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- =========================
+                 HERO RIGHT
+            ========================== -->
+            <div class="hero-right">
+
+                <div class="experience-card">
+
+                    <span class="experience-number">
+
+                        14+
+
+                    </span>
+
+                    <span class="experience-title">
+
+                        Years of Marine Engineering Excellence
+
+                    </span>
+
+                </div>
+
+                <div class="hero-highlights">
+
+                    <div class="highlight-item">
+
+                        <i class="fas fa-check-circle"></i>
+
+                        <span>Established Since 2012</span>
+
+                    </div>
+
+                    <div class="highlight-item">
+
+                        <i class="fas fa-check-circle"></i>
+
+                        <span>24×7 Technical Support</span>
+
+                    </div>
+
+                    <div class="highlight-item">
+
+                        <i class="fas fa-check-circle"></i>
+
+                        <span>Genuine & OEM Spare Parts</span>
+
+                    </div>
+
+                    <div class="highlight-item">
+
+                        <i class="fas fa-check-circle"></i>
+
+                        <span>Offshore • Onshore • Onboard</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================================================
+     HERO SECTION END
+================================================== -->
+
+
+
+<!-- ==================================================
+     TRUST STRIP START
+================================================== -->
+<section class="trust-strip">
+
+    <div class="container">
+
+        <div class="trust-grid">
+
+            <!-- Experience -->
+            <div class="trust-item">
+
+                <div class="trust-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+
+                <div class="trust-content">
+
+                    <h4>14+ Years of Experience</h4>
+
+                    <p>
+                        Delivering trusted marine engineering solutions since 2012.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Compressor Expertise -->
+            <div class="trust-item">
+
+                <div class="trust-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+
+                <div class="trust-content">
+
+                    <h4>Marine Compressor Specialists</h4>
+
+                    <p>
+                        Inspection, repair, overhauling and preventive maintenance.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Spare Parts -->
+            <div class="trust-item">
+
+                <div class="trust-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+
+                <div class="trust-content">
+
+                    <h4>Genuine & OEM Spare Parts</h4>
+
+                    <p>
+                        Quality replacement parts from trusted manufacturers.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Support -->
+            <div class="trust-item">
+
+                <div class="trust-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+
+                <div class="trust-content">
+
+                    <h4>24×7 Technical Support</h4>
+
+                    <p>
+                        Offshore • Onshore • Onboard marine engineering assistance.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==================================================
+     TRUST STRIP END
+================================================== -->
+
+
+
+      <!-- ==========================================
+            WHO WE ARE SECTION START
+=========================================== -->
+
+      <section class="company-intro section-padding" id="about">
         <div class="container">
-          <div class="row align-items-center min-vh-100">
-            <div class="col-lg-7">
-              <span class="hero-tag"> OFFSHORE | ONSHORE | ONBOARD </span>
+          <!-- Section Header -->
 
-              <h1 class="hero-title mt-3">
-                Reliable Marine Engineering
-                <br />
-                & Compressor Solutions
-              </h1>
+          <div class="section-header">
+            <span class="section-tag"> WHO WE ARE </span>
 
-              <p class="hero-text mt-4">
-                Delivering dependable compressor servicing, genuine marine spare
-                parts, and onboard technical support to keep vessels operating
-                safely and efficiently.
+            <h2>
+              Why do ship owners trust
+              <span>SAMS Marine Services?</span>
+            </h2>
+
+            <p>
+              Since 2012, SAMS Marine Services has been delivering dependable
+              marine engineering solutions to ship owners, ship managers, and
+              marine operators. We specialize in compressor servicing, genuine
+              OEM spare parts, onboard technical support, workshop repairs, and
+              preventive maintenance that help reduce vessel downtime and
+              improve operational efficiency.
+            </p>
+          </div>
+
+          <!-- Identity Grid -->
+
+          <div class="identity-grid">
+            <div class="identity-card">
+              <i class="fas fa-calendar-alt"></i>
+
+              <h3>Established</h3>
+
+              <h4>2012</h4>
+
+              <p>
+                Delivering trusted marine engineering solutions for over a
+                decade.
+              </p>
+            </div>
+
+            <div class="identity-card">
+              <i class="fas fa-cogs"></i>
+
+              <h3>Specialization</h3>
+
+              <h4>Marine Compressors</h4>
+
+              <p>
+                Inspection, overhaul, maintenance and repair of marine
+                compressors.
+              </p>
+            </div>
+
+            <div class="identity-card">
+              <i class="fas fa-tools"></i>
+
+              <h3>Products</h3>
+
+              <h4>OEM Spare Parts</h4>
+
+              <p>
+                Genuine and OEM-quality spare parts from trusted manufacturers.
+              </p>
+            </div>
+
+            <div class="identity-card">
+              <i class="fas fa-ship"></i>
+
+              <h3>Support</h3>
+
+              <h4>Offshore | Onshore | Onboard</h4>
+
+              <p>
+                Professional technical support wherever your vessel operates.
+              </p>
+            </div>
+          </div>
+
+          <!-- Core Highlights -->
+
+          <div class="company-highlights">
+            <div class="highlight">
+              <i class="fas fa-check-circle"></i>
+
+              Reliable Marine Engineering
+            </div>
+
+            <div class="highlight">
+              <i class="fas fa-check-circle"></i>
+
+              Experienced Marine Engineers
+            </div>
+
+            <div class="highlight">
+              <i class="fas fa-check-circle"></i>
+
+              International Quality Standards
+            </div>
+
+            <div class="highlight">
+              <i class="fas fa-check-circle"></i>
+
+              Fast Technical Response
+            </div>
+          </div>
+
+          <!-- CTA -->
+
+          <div class="section-action">
+            <a href="about.html" class="btn btn-primary">
+              Learn More About SAMS
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+            WHO WE ARE SECTION END
+=========================================== -->
+
+      <!-- ==========================================
+            OUR SERVICES START
+=========================================== -->
+
+      <section class="services section-padding" id="services">
+        <div class="container">
+          <!-- Section Header -->
+
+          <div class="section-header">
+            <span class="section-tag"> OUR SERVICES </span>
+
+            <h2>
+              How can we support
+              <span>your vessel?</span>
+            </h2>
+
+            <p>
+              We provide comprehensive marine engineering services designed to
+              improve equipment reliability, minimize downtime, and keep your
+              vessel operating safely and efficiently.
+            </p>
+          </div>
+
+          <!-- Services Grid -->
+
+          <div class="services-grid">
+            <!-- Card 1 -->
+
+            <article class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-cogs"></i>
+              </div>
+
+              <h3>Marine Air Compressors</h3>
+
+              <p>
+                Inspection, repair, overhaul and preventive maintenance for
+                marine air compressors.
               </p>
 
-              <div class="mt-5">
-                <a href="quote.html" class="btn btn-danger me-3">
-                  Request Quote
-                </a>
+              <a href="services.html">
+                Learn More
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </article>
 
-                <a href="services.html" class="btn btn-outline-light">
-                  Our Services
-                </a>
+            <!-- Card 2 -->
+
+            <article class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-snowflake"></i>
               </div>
+
+              <h3>Refrigeration Compressors</h3>
+
+              <p>
+                Professional servicing and overhaul of marine refrigeration
+                compressor systems.
+              </p>
+
+              <a href="services.html">
+                Learn More
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- Card 3 -->
+
+            <article class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-toolbox"></i>
+              </div>
+
+              <h3>Marine Spare Parts</h3>
+
+              <p>
+                Genuine and OEM-quality spare parts for leading marine equipment
+                manufacturers.
+              </p>
+
+              <a href="products.html">
+                View Products
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- Card 4 -->
+
+            <article class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-ship"></i>
+              </div>
+
+              <h3>Onboard Technical Support</h3>
+
+              <p>
+                Experienced marine engineers providing onboard inspection,
+                troubleshooting and repair.
+              </p>
+
+              <a href="services.html">
+                Learn More
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- Card 5 -->
+
+            <article class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-industry"></i>
+              </div>
+
+              <h3>Workshop Repair Services</h3>
+
+              <p>
+                Precision repair and overhauling using professional tools and
+                quality procedures.
+              </p>
+
+              <a href="services.html">
+                Learn More
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- Card 6 -->
+
+            <article class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-search"></i>
+              </div>
+
+              <h3>Diagnostics & Maintenance</h3>
+
+              <p>
+                Accurate fault diagnosis and preventive maintenance to improve
+                equipment reliability.
+              </p>
+
+              <a href="services.html">
+                Learn More
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+            OUR SERVICES END
+=========================================== -->
+      <!-- ==========================================
+            WHY CHOOSE SAMS START
+=========================================== -->
+
+      <section class="why-choose section-padding" id="why">
+        <div class="container">
+          <!-- Section Header -->
+
+          <div class="section-header">
+            <span class="section-tag"> WHY CHOOSE SAMS </span>
+
+            <h2>
+              Why partner with
+              <span>SAMS Marine Services?</span>
+            </h2>
+
+            <p>
+              We combine technical expertise, genuine spare parts, responsive
+              support, and international quality standards to deliver dependable
+              marine engineering solutions that keep your operations running
+              efficiently.
+            </p>
+          </div>
+
+          <!-- Features -->
+
+          <div class="why-grid">
+            <!-- Card 1 -->
+
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fas fa-user-cog"></i>
+              </div>
+
+              <h3>Experienced Engineers</h3>
+
+              <p>
+                Skilled marine engineers with extensive experience in compressor
+                servicing and technical support.
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+
+              <h3>OEM Quality Spare Parts</h3>
+
+              <p>
+                Genuine and OEM-quality spare parts sourced from trusted
+                manufacturers.
+              </p>
+            </div>
+
+            <!-- Card 3 -->
+
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+
+              <h3>Fast Response</h3>
+
+              <p>
+                Prompt technical assistance to reduce downtime and restore
+                vessel operations quickly.
+              </p>
+            </div>
+
+            <!-- Card 4 -->
+
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+
+              <h3>Quality & Safety</h3>
+
+              <p>
+                Every service is carried out with a strong commitment to
+                quality, safety, and industry best practices.
+              </p>
+            </div>
+
+            <!-- Card 5 -->
+
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+
+              <h3>Global Support</h3>
+
+              <p>
+                OFFSHORE, ONSHORE, and ONBOARD support for vessels operating in
+                different regions.
+              </p>
+            </div>
+
+            <!-- Card 6 -->
+
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fas fa-handshake"></i>
+              </div>
+
+              <h3>Long-Term Partnerships</h3>
+
+              <p>
+                We believe in building lasting relationships through
+                reliability, transparency, and professional service.
+              </p>
             </div>
           </div>
         </div>
+      </section>
+
+      <!-- ==========================================
+            WHY CHOOSE SAMS END
+=========================================== -->
+
+      <!-- ==========================================
+            ENGINEERING PROCESS START
+=========================================== -->
+
+      <section class="process section-padding" id="process">
+        <div class="container">
+          <!-- Section Header -->
+
+          <div class="section-header">
+            <span class="section-tag"> OUR PROCESS </span>
+
+            <h2>
+              From enquiry to
+              <span>successful completion</span>
+            </h2>
+
+            <p>
+              Every project follows a structured engineering process to ensure
+              quality workmanship, timely delivery, and reliable technical
+              support.
+            </p>
+          </div>
+
+          <div class="process-grid">
+            <!-- Step 1 -->
+
+            <div class="process-card">
+              <div class="process-number">01</div>
+
+              <div class="process-icon">
+                <i class="fas fa-phone-volume"></i>
+              </div>
+
+              <h3>Service Request</h3>
+
+              <p>
+                Share your technical requirement or service enquiry with our
+                engineering team.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+
+            <div class="process-card">
+              <div class="process-number">02</div>
+
+              <div class="process-icon">
+                <i class="fas fa-search"></i>
+              </div>
+
+              <h3>Inspection & Diagnosis</h3>
+
+              <p>
+                Our engineers inspect the equipment and identify the root cause
+                of the issue.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+
+            <div class="process-card">
+              <div class="process-number">03</div>
+
+              <div class="process-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+
+              <h3>Repair & Overhaul</h3>
+
+              <p>
+                Repairs are carried out using professional tools, genuine parts,
+                and proven engineering practices.
+              </p>
+            </div>
+
+            <!-- Step 4 -->
+
+            <div class="process-card">
+              <div class="process-number">04</div>
+
+              <div class="process-icon">
+                <i class="fas fa-vial"></i>
+              </div>
+
+              <h3>Testing & Quality Check</h3>
+
+              <p>
+                Equipment is tested thoroughly to ensure safe and reliable
+                operation before delivery.
+              </p>
+            </div>
+
+            <!-- Step 5 -->
+
+            <div class="process-card">
+              <div class="process-number">05</div>
+
+              <div class="process-icon">
+                <i class="fas fa-ship"></i>
+              </div>
+
+              <h3>Delivery & Support</h3>
+
+              <p>
+                We provide ongoing technical support and assistance whenever
+                your vessel needs us.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+            ENGINEERING PROCESS END
+=========================================== -->
+
+      <!-- ==========================================
+            FEATURED PRODUCTS START
+=========================================== -->
+
+      <section class="products section-padding" id="products">
+        <div class="container">
+          <!-- Section Header -->
+
+          <div class="section-header">
+            <span class="section-tag"> FEATURED PRODUCTS </span>
+
+            <h2>
+              Looking for
+              <span>genuine marine spare parts?</span>
+            </h2>
+
+            <p>
+              We supply genuine and OEM-quality spare parts for leading marine
+              compressor and refrigeration systems, ensuring dependable
+              performance and long service life.
+            </p>
+          </div>
+
+          <!-- Product Categories -->
+
+          <div class="products-grid">
+            <!-- Card 1 -->
+
+            <article class="product-card">
+              <div class="product-icon">
+                <i class="fas fa-cogs"></i>
+              </div>
+
+              <h3>Marine Air Compressor Parts</h3>
+
+              <p>
+                Complete range of replacement components for marine air
+                compressor systems.
+              </p>
+
+              <a href="products.html">
+                View Category
+
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- Card 2 -->
+
+            <article class="product-card">
+              <div class="product-icon">
+                <i class="fas fa-snowflake"></i>
+              </div>
+
+              <h3>Refrigeration Compressor Parts</h3>
+
+              <p>
+                OEM-quality parts for marine refrigeration and cooling systems.
+              </p>
+
+              <a href="products.html">
+                View Category
+
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- Card 3 -->
+
+            <article class="product-card">
+              <div class="product-icon">
+                <i class="fas fa-filter"></i>
+              </div>
+
+              <h3>Filters & Service Kits</h3>
+
+              <p>
+                High-quality filters, seals, repair kits and maintenance
+                components.
+              </p>
+
+              <a href="products.html">
+                View Category
+
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </article>
+
+            <!-- Card 4 -->
+
+            <article class="product-card">
+              <div class="product-icon">
+                <i class="fas fa-wrench"></i>
+              </div>
+
+              <h3>Valves & Accessories</h3>
+
+              <p>
+                Essential valves, fittings and accessories for marine
+                engineering applications.
+              </p>
+
+              <a href="products.html">
+                View Category
+
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </article>
+          </div>
+
+          <!-- Bottom CTA -->
+
+          <div class="section-action">
+            <a href="products.html" class="btn btn-primary">
+              Explore All Products
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+            FEATURED PRODUCTS END
+=========================================== -->
+
+      <!-- ==========================================
+            INDUSTRIES START
+=========================================== -->
+
+      <section class="industries section-padding" id="industries">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag"> INDUSTRIES WE SERVE </span>
+
+            <h2>
+              Supporting the
+              <span>global maritime industry</span>
+            </h2>
+
+            <p>
+              Our engineering services and spare parts support a wide range of
+              marine sectors with dependable technical solutions.
+            </p>
+          </div>
+
+          <div class="industries-grid">
+            <div class="industry-card">
+              <i class="fas fa-ship"></i>
+
+              <h3>Commercial Shipping</h3>
+            </div>
+
+            <div class="industry-card">
+              <i class="fas fa-water"></i>
+
+              <h3>Offshore Operations</h3>
+            </div>
+
+            <div class="industry-card">
+              <i class="fas fa-anchor"></i>
+
+              <h3>Ports & Harbours</h3>
+            </div>
+
+            <div class="industry-card">
+              <i class="fas fa-industry"></i>
+
+              <h3>Shipyards</h3>
+            </div>
+
+            <div class="industry-card">
+              <i class="fas fa-globe-asia"></i>
+
+              <h3>Marine Operators</h3>
+            </div>
+
+            <div class="industry-card">
+              <i class="fas fa-hard-hat"></i>
+
+              <h3>Engineering Companies</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+            INDUSTRIES END
+=========================================== -->
+
+      <!-- ==========================================
+            CALL TO ACTION START
+=========================================== -->
+
+      <section class="cta section-padding">
+        <div class="container">
+          <div class="cta-wrapper">
+            <span class="section-tag"> READY TO WORK WITH US? </span>
+
+            <h2>Need Reliable Marine Engineering Support?</h2>
+
+            <p>
+              Whether you require compressor overhauling, genuine spare parts,
+              onboard technical assistance, or preventive maintenance, our
+              experienced engineers are ready to support your vessel with
+              reliable and efficient solutions.
+            </p>
+
+            <div class="cta-buttons">
+              <a href="quote.html" class="btn btn-primary"> Request a Quote </a>
+
+              <a href="contact.html" class="btn btn-secondary"> Contact Us </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+            CALL TO ACTION END
+=========================================== -->
+    </main>
+    <!-- ==========================================
+                FOOTER START
+=========================================== -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Company -->
+
+          <div class="footer-column">
+            <img
+              src="assets/images/logo/LOGO.jpeg"
+              alt="SAMS Marine Services"
+              class="footer-logo"
+            />
+
+            <p>
+              SAMS Marine Services has been delivering dependable marine
+              engineering solutions since 2012, specializing in compressor
+              servicing, genuine spare parts, onboard technical support, and
+              workshop repair services.
+            </p>
+
+            <div class="footer-tagline">OFFSHORE | ONSHORE | ONBOARD</div>
+          </div>
+
+          <!-- Quick Links -->
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <ul>
+              <li><a href="index.html">Home</a></li>
+
+              <li><a href="about.html">About</a></li>
+
+              <li><a href="services.html">Services</a></li>
+
+              <li><a href="products.html">Products</a></li>
+
+              <li><a href="industries.html">Industries</a></li>
+
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+
+          <div class="footer-column">
+            <h3>Our Services</h3>
+
+            <ul>
+              <li>Marine Air Compressors</li>
+
+              <li>Refrigeration Compressors</li>
+
+              <li>Marine Spare Parts</li>
+
+              <li>Workshop Repairs</li>
+
+              <li>Onboard Technical Support</li>
+
+              <li>Preventive Maintenance</li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+
+          <div class="footer-column">
+            <h3>Contact Information</h3>
+
+            <ul class="footer-contact">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                Gandhidham, Gujarat, India
+              </li>
+
+              <li>
+                <i class="fas fa-phone"></i>
+                +91 98242 25883
+              </li>
+
+              <li>
+                <i class="fas fa-envelope"></i>
+                info@samsmarineservices.com
+              </li>
+
+              <li>
+                <i class="fas fa-clock"></i>
+                Mon - Sat : 9:00 AM - 6:00 PM
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom -->
+
+        <div class="footer-bottom">
+          <p>© 2026 SAMS Marine Services. All Rights Reserved.</p>
+
+          <p>Your Compressors, Our Responsibility.</p>
+        </div>
       </div>
-    </section>
+    </footer>
 
-    <!-- ===========================
-Hero Section End
-=========================== -->
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- ==========================================
+                FOOTER END
+=========================================== -->
 
-    <script src="assets/js/script.js"></script>
+    <!-- ==========================================
+                JAVASCRIPT FILES
+    =========================================== -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/forms.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/counter.js"></script>
   </body>
 </html>

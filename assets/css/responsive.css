@@ -1,18 +1,562 @@
+/*==================================================
+    RESPONSIVE.CSS
+==================================================*/
 
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 38px;
-  }
 
-  .hero-text {
-    font-size: 16px;
-  }
+/*==============================================
+    1400px
+==============================================*/
 
-  .hero {
-    text-align: center;
-  }
+@media (max-width:1400px){
 
-  .hero-tag {
-    display: inline-block;
-  }
+.container{
+
+    max-width:1140px;
+
+}
+
+.hero-content h1{
+
+    font-size:54px;
+
+}
+
+}
+
+
+@media (max-width: 991px) {
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media(max-width:991px){
+
+.navbar .container{
+    flex-wrap:wrap;
+}
+
+.nav-menu{
+    display:none;
+    width:100%;
+    flex-direction:column;
+    background:#fff;
+    margin-top:20px;
+    padding:20px;
+    border-top:1px solid #eee;
+}
+
+.nav-menu.show{
+    display:flex;
+}
+
+.mobile-toggle{
+    display:flex;
+}
+
+.company-tagline{
+    display:none;
+}
+
+}
+
+/*==============================================
+    1200px
+==============================================*/
+
+@media (max-width:1200px){
+
+.container{
+
+    max-width:960px;
+
+}
+
+.hero-wrapper{
+
+    gap:50px;
+
+}
+
+.hero-content h1{
+
+    font-size:48px;
+
+}
+
+.section-padding{
+
+    padding:100px 0;
+
+}
+
+.identity-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.stats-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.services-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.products-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.industries-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.process-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.process-grid::before{
+
+    display:none;
+
+}
+
+.footer-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/*==============================================
+    992px
+==============================================*/
+
+@media (max-width:992px){
+
+.top-bar{
+
+    display:none;
+
+}
+
+.site-header{
+
+    top:0;
+
+    background:#fff;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.logo-text h4{
+
+    color:var(--primary-color);
+
+}
+
+.logo-text span{
+
+    color:var(--text-light);
+
+}
+
+.nav-menu{
+
+    position:fixed;
+
+    top:0;
+
+    right:-100%;
+
+    width:320px;
+
+    height:100vh;
+
+    background:#fff;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    padding:120px 40px;
+
+    gap:25px;
+
+    transition:.4s;
+
+    box-shadow:-10px 0 30px rgba(0,0,0,.08);
+
+}
+
+.nav-menu.active{
+
+    right:0;
+
+}
+
+.nav-menu a{
+
+    color:var(--heading-color);
+
+}
+
+.mobile-toggle{
+
+    display:flex;
+
+}
+
+.nav-right .btn{
+
+    display:none;
+
+}
+
+.hero{
+
+    min-height:auto;
+
+    padding:180px 0 120px;
+
+}
+
+.hero-wrapper{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.hero-content{
+
+    max-width:100%;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.hero-features{
+
+    justify-content:center;
+
+}
+
+.hero-image{
+
+    margin-top:60px;
+
+}
+
+.company-intro .container{
+
+    gap:60px;
+
+}
+
+.company-info{
+
+    grid-template-columns:1fr;
+
+}
+
+.why-choose .container{
+
+    grid-template-columns:1fr;
+
+}
+
+.why-content{
+
+    position:static;
+
+}
+
+.why-grid{
+
+    margin-top:30px;
+
+}
+
+.cta-content{
+
+    padding:0 20px;
+
+}
+
+}
+
+/*==============================================
+    768px
+==============================================*/
+
+@media (max-width:768px){
+
+.section-padding{
+
+    padding:80px 0;
+
+}
+
+.hero-content h1{
+
+    font-size:40px;
+
+}
+
+.hero-content p{
+
+    font-size:17px;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.hero-buttons .btn{
+
+    width:100%;
+
+}
+
+.hero-stats{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+.identity-grid,
+
+.services-grid,
+
+.products-grid,
+
+.process-grid,
+
+.industries-grid,
+
+.stats-grid,
+
+.why-grid,
+
+.footer-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.trust-strip .container{
+
+    grid-template-columns:1fr;
+
+}
+
+.trust-item{
+
+    justify-content:center;
+
+    text-align:center;
+
+    flex-direction:column;
+
+}
+
+.footer-bottom .container{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+}
+
+/*==============================================
+    576px
+==============================================*/
+
+@media (max-width:576px){
+
+.container{
+
+    padding-left:20px;
+
+    padding-right:20px;
+
+}
+
+.hero{
+
+    padding:150px 0 100px;
+
+}
+
+.hero-content h1{
+
+    font-size:34px;
+
+}
+
+.section-header h2{
+
+    font-size:34px;
+
+}
+
+.stat-number{
+
+    font-size:40px;
+
+}
+
+.service-card,
+
+.product-card,
+
+.process-card,
+
+.why-card,
+
+.industry-card{
+
+    padding:30px 25px;
+
+}
+
+.back-to-top{
+
+    width:50px;
+
+    height:50px;
+
+    right:20px;
+
+    bottom:20px;
+
+}
+
+.floating-contact{
+
+    right:20px;
+
+    bottom:90px;
+
+}
+
+}
+
+/*==============================================
+    400px
+==============================================*/
+
+@media (max-width:400px){
+
+.hero-content h1{
+
+    font-size:30px;
+
+}
+
+.hero-tag{
+
+    font-size:12px;
+
+}
+
+.hero-feature{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+.nav-menu{
+
+    width:100%;
+
+}
+
+.logo img{
+
+    height:48px;
+
+}
+
+}
+
+/*=====================================================
+  TRUST STRIP
+=====================================================*/
+
+@media (max-width:1199px){
+
+.trust-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media (max-width:767px){
+
+.trust-strip{
+    padding:50px 0;
+}
+
+.trust-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.trust-item{
+    padding:20px;
+}
+
+.trust-icon{
+    width:55px;
+    height:55px;
+}
+
+.trust-icon i{
+    font-size:1.25rem;
+}
+
+.trust-content h4{
+    font-size:1rem;
+}
+
+.trust-content p{
+    font-size:.9rem;
+}
+
 }
