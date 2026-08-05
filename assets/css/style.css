@@ -1917,194 +1917,275 @@ Hero Right
 
 }
 
-/*==================================================
-    WHY CHOOSE US
-==================================================*/
+/*=====================================================
+  ABOUT SECTION
+=====================================================*/
 
-.why-choose{
-
+.about{
     position:relative;
-
-    padding:120px 0;
-
-    background:var(--white);
-
+    background:linear-gradient(180deg,#f8fbfd 0%,#ffffff 100%);
+    overflow:hidden;
 }
 
-.why-choose .container{
-
+.about-wrapper{
     display:grid;
-
-    grid-template-columns:420px 1fr;
-
-    gap:70px;
-
-    align-items:start;
-
-}
-
-
-/*==============================================
-    LEFT CONTENT
-==============================================*/
-
-.why-content{
-
-    position:sticky;
-
-    top:120px;
-
-}
-
-.why-content .section-header{
-
-    margin-bottom:35px;
-
-}
-
-.why-content p{
-
-    margin-bottom:30px;
-
-}
-
-
-/*==============================================
-    FEATURE LIST
-==============================================*/
-
-.why-list{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:20px;
-
-}
-
-.why-list li{
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:18px;
-
-}
-
-.why-list i{
-
-    width:42px;
-
-    height:42px;
-
-    display:flex;
-
+    grid-template-columns:1fr 1fr;
+    gap:80px;
     align-items:center;
+    margin-top:70px;
+}
 
-    justify-content:center;
+/*============================
+ABOUT IMAGE
+============================*/
+
+.about-image{
+    position:relative;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:24px;
+    display:block;
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
+    transition:.5s;
+}
+
+.about-image:hover img{
+    transform:scale(1.02);
+}
+
+/* Decorative Circle */
+
+.about-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    background:rgba(0,91,150,.08);
 
     border-radius:50%;
 
-    background:rgba(212,160,23,.12);
+    top:-45px;
+
+    left:-45px;
+
+    filter:blur(35px);
+
+    z-index:-1;
+
+}
+
+/*============================
+Experience Badge
+============================*/
+
+.experience-badge{
+
+    position:absolute;
+
+    bottom:35px;
+
+    left:-30px;
+
+    width:170px;
+
+    background:var(--primary-color);
+
+    color:#fff;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.18);
+
+}
+
+.experience-number{
+
+    display:block;
+
+    font-size:3rem;
+
+    font-weight:800;
+
+    line-height:1;
+
+}
+
+.experience-text{
+
+    display:block;
+
+    margin-top:10px;
+
+    font-size:.9rem;
+
+    line-height:1.5;
+
+}
+
+/*============================
+ABOUT CONTENT
+============================*/
+
+.content-tag{
+
+    display:inline-block;
 
     color:var(--secondary-color);
 
-    flex-shrink:0;
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
 
 }
 
-.why-list h5{
+.about-content h3{
 
-    margin-bottom:8px;
+    font-size:2.3rem;
 
-}
+    color:var(--primary-color);
 
-.why-list p{
-
-    margin:0;
-
-    font-size:16px;
+    margin-bottom:25px;
 
 }
 
+.about-content p{
 
-/*==============================================
-    RIGHT GRID
-==============================================*/
+    margin-bottom:20px;
 
-.why-grid{
+    line-height:1.9;
+
+    color:var(--text-light);
+
+}
+
+/*============================
+ABOUT LIST
+============================*/
+
+.about-list{
 
     display:grid;
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:30px;
+    gap:18px;
+
+    margin:35px 0;
 
 }
 
-.why-card{
+.about-item{
 
-    padding:40px;
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    font-weight:600;
+
+}
+
+.about-item i{
+
+    color:var(--secondary-color);
+
+    margin-top:4px;
+
+    font-size:1.1rem;
+
+}
+
+/*============================
+BUTTON
+============================*/
+
+.about-buttons{
+
+    margin-top:40px;
+
+}
+
+/*============================
+FEATURE CARDS
+============================*/
+
+.about-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-top:90px;
+
+}
+
+.feature-card{
 
     background:#fff;
 
-    border:1px solid var(--border-color);
-
     border-radius:20px;
 
-    transition:var(--transition-normal);
+    padding:35px 25px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+    border-top:4px solid transparent;
 
 }
 
-.why-card:hover{
+.feature-card:hover{
 
     transform:translateY(-10px);
+
+    border-color:var(--secondary-color);
 
     box-shadow:var(--shadow-lg);
 
 }
 
-.why-card .why-icon{
+.feature-card i{
 
-    width:82px;
+    font-size:2rem;
 
-    height:82px;
+    color:var(--primary-color);
 
-    margin-bottom:25px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border-radius:20px;
-
-    background:rgba(212,160,23,.12);
+    margin-bottom:20px;
 
 }
 
-.why-card .why-icon i{
+.feature-card h4{
 
-    font-size:34px;
+    margin-bottom:10px;
 
-    color:var(--secondary-color);
-
-}
-
-.why-card h3{
-
-    margin-bottom:15px;
-
-    font-size:24px;
+    color:var(--primary-color);
 
 }
 
-.why-card p{
+.feature-card p{
 
-    font-size:16px;
+    margin:0;
 
     color:var(--text-light);
 
