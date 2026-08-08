@@ -1853,6 +1853,322 @@ ABOUT IMAGE
 
 }
 
+/*=====================================================
+  ENGINEERING PROCESS
+=====================================================*/
+
+.process {
+    position: relative;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+
+/*============================
+PROCESS TIMELINE
+============================*/
+
+.process-timeline {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 25px;
+
+    margin-top: 70px;
+}
+
+
+/* Connecting Line */
+
+.process-timeline::before {
+    content: "";
+
+    position: absolute;
+
+    top: 43px;
+    left: 8%;
+    right: 8%;
+
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        var(--primary-color),
+        var(--secondary-color),
+        var(--primary-color)
+    );
+
+    z-index: 0;
+}
+
+
+/*============================
+PROCESS STEP
+============================*/
+
+.process-step {
+    position: relative;
+
+    text-align: center;
+
+    z-index: 1;
+}
+
+
+/*============================
+NUMBER + ICON
+============================*/
+
+.process-step-top {
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 90px;
+
+    margin-bottom: 30px;
+}
+
+
+.process-number {
+    position: absolute;
+
+    top: -10px;
+    right: calc(50% - 55px);
+
+    font-size: 0.75rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: var(--secondary-color);
+
+    background: #ffffff;
+
+    padding: 3px 7px;
+
+    border-radius: 5px;
+
+    z-index: 3;
+}
+
+
+/*============================
+PROCESS ICON
+============================*/
+
+.process-icon {
+
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--primary-color);
+
+    color: #ffffff;
+
+    border: 5px solid #ffffff;
+
+    box-shadow:
+        0 0 0 2px var(--secondary-color),
+        0 12px 30px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.process-icon i {
+    font-size: 1.35rem;
+}
+
+
+/*============================
+HOVER
+============================*/
+
+.process-step:hover .process-icon {
+
+    transform: translateY(-7px);
+
+    background: var(--secondary-color);
+
+    box-shadow:
+        0 0 0 2px var(--primary-color),
+        0 18px 35px rgba(0, 0, 0, 0.16);
+
+}
+
+
+/*============================
+PROCESS CONTENT
+============================*/
+
+.process-content {
+    padding: 0 8px;
+}
+
+
+.process-label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    color: var(--secondary-color);
+
+}
+
+
+.process-content h3 {
+
+    margin-bottom: 12px;
+
+    font-size: 1.15rem;
+
+    line-height: 1.35;
+
+    color: var(--primary-color);
+
+}
+
+
+.process-content p {
+
+    margin: 0;
+
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+
+    color: var(--text-light);
+
+}
+
+
+/*============================
+PROCESS CTA
+============================*/
+
+.process-cta {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-top: 80px;
+
+    padding: 38px 45px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-color),
+            #102b47
+        );
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+
+.process-cta-content {
+    max-width: 760px;
+}
+
+
+.process-cta-tag {
+
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: var(--secondary-color);
+
+    font-size: 0.75rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.process-cta h3 {
+
+    margin-bottom: 10px;
+
+    color: #ffffff;
+
+    font-size: 1.65rem;
+
+}
+
+
+.process-cta p {
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    line-height: 1.7;
+
+}
+
+
+.process-cta-action {
+    flex-shrink: 0;
+}
+
+
+.process-cta-action .btn {
+
+    white-space: nowrap;
+}
+
+
+.process-cta-action .btn i {
+
+    margin-left: 8px;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.process-cta-action .btn:hover i {
+
+    transform: translateX(5px);
+
+}
+
 /*============================
 Experience Badge
 ============================*/
@@ -2839,532 +3155,1547 @@ transform:scale(1.04);
 
 }
 
-/*==================================================
-    PRODUCTS
-==================================================*/
+/*=====================================================
+  FEATURED PRODUCTS
+=====================================================*/
 
-.products{
-
-    position:relative;
-
-    padding:120px 0;
-
-    background:var(--light-bg);
-
-}
-
-.products-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
+.products {
+    position: relative;
+    background: var(--bg-light);
+    overflow: hidden;
 }
 
 
-/*==============================================
-    PRODUCT CARD
-==============================================*/
+/*============================
+PRODUCT GRID
+============================*/
 
-.product-card{
+.products-grid {
 
-    background:#fff;
+    display: grid;
 
-    border-radius:20px;
+    grid-template-columns: repeat(4, 1fr);
 
-    border:1px solid var(--border-color);
+    gap: 25px;
 
-    padding:40px 35px;
-
-    transition:var(--transition-normal);
-
-    text-align:center;
-
-}
-
-.product-card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:var(--shadow-lg);
-
-}
-
-.product-icon{
-
-    width:90px;
-
-    height:90px;
-
-    margin:0 auto 30px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    background:rgba(11,31,58,.06);
-
-    border-radius:20px;
-
-}
-
-.product-icon i{
-
-    font-size:40px;
-
-    color:var(--primary-color);
-
-}
-
-.product-card h3{
-
-    margin-bottom:18px;
-
-}
-
-.product-card p{
-
-    margin-bottom:25px;
-
-    color:var(--text-light);
+    margin-top: 60px;
 
 }
 
 
-/*==============================================
-    PRODUCT BUTTON
-==============================================*/
+/*============================
+PRODUCT CARD
+============================*/
 
-.products-footer{
+.product-card {
 
-    margin-top:70px;
+    position: relative;
 
-    text-align:center;
+    display: flex;
 
-}
+    flex-direction: column;
 
-/*==================================================
-    INDUSTRIES
-==================================================*/
+    min-height: 390px;
 
-.industries{
+    padding: 30px;
 
-    position:relative;
+    background: #ffffff;
 
-    padding:120px 0;
+    border: 1px solid rgba(15, 43, 71, 0.08);
 
-    background:var(--white);
+    border-radius: 18px;
 
-}
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 
-.industries .section-header{
+    overflow: hidden;
 
-    margin-bottom:70px;
-
-}
-
-
-/*==============================================
-    INDUSTRY GRID
-==============================================*/
-
-.industries-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:30px;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
 
 }
 
 
-/*==============================================
-    INDUSTRY CARD
-==============================================*/
+/* Top Accent */
 
-.industry-card{
+.product-card::before {
 
-    position:relative;
+    content: "";
 
-    background:#fff;
+    position: absolute;
 
-    border:1px solid var(--border-color);
+    top: 0;
+    left: 0;
 
-    border-radius:20px;
+    width: 100%;
+    height: 4px;
 
-    padding:45px 30px;
+    background: var(--secondary-color);
 
-    text-align:center;
+    transform: scaleX(0);
 
-    overflow:hidden;
+    transform-origin: left;
 
-    transition:var(--transition-normal);
-
-}
-
-.industry-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    top:0;
-
-    width:100%;
-
-    height:4px;
-
-    background:var(--secondary-color);
-
-    transform:scaleX(0);
-
-    transform-origin:left;
-
-    transition:.4s;
+    transition: transform 0.35s ease;
 
 }
 
-.industry-card:hover::before{
 
-    transform:scaleX(1);
+.product-card:hover {
 
-}
+    transform: translateY(-8px);
 
-.industry-card:hover{
+    border-color: rgba(15, 43, 71, 0.15);
 
-    transform:translateY(-10px);
-
-    box-shadow:var(--shadow-lg);
-
-}
-
-.industry-icon{
-
-    width:90px;
-
-    height:90px;
-
-    margin:0 auto 30px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border-radius:50%;
-
-    background:rgba(212,160,23,.12);
-
-}
-
-.industry-icon i{
-
-    font-size:38px;
-
-    color:var(--secondary-color);
-
-}
-
-.industry-card h3{
-
-    margin-bottom:18px;
-
-}
-
-.industry-card p{
-
-    color:var(--text-light);
-
-    font-size:16px;
-
-}
-
-/*==================================================
-    CALL TO ACTION
-    
-    cta-bg.jpg:1  Failed to load resource: net::ERR_FILE_NOT_FOUND
-assets/images/logo/favicon.ico:1  Failed to load resource: net::ERR_FILE_NOT_FOUND
-index.html:1 Unsafe attempt to load URL file:///D:/NEW%20LAPTOP%20DATA/SAMS-Marine-Services/index.html from frame with URL file:///D:/NEW%20LAPTOP%20DATA/SAMS-Marine-Services/index.html. 'file:' URLs are treated as unique security origins.
-
-
-==================================================*/
-
-.cta{
-
-    position:relative;
-
-    padding:140px 0;
-
-    
-
-}
-
-.cta::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:rgba(11,31,58,.88);
-
-}
-
-.cta .container{
-
-    position:relative;
-
-    z-index:2;
-
-}
-
-.cta-content{
-
-    max-width:900px;
-
-    margin:auto;
-
-    text-align:center;
-
-}
-
-.cta-content h2{
-
-    color:#fff;
-
-    margin-bottom:25px;
-
-}
-
-.cta-content p{
-
-    color:rgba(255,255,255,.85);
-
-    max-width:700px;
-
-    margin:0 auto 40px;
-
-}
-
-.cta-buttons{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:20px;
-
-    flex-wrap:wrap;
-
-}
-
-/*==================================================
-    FOOTER
-==================================================*/
-
-.footer{
-
-    position:relative;
-
-    background:var(--primary-dark);
-
-    color:rgba(255,255,255,.75);
-
-}
-
-.footer-top{
-
-    padding:90px 0 60px;
-
-}
-
-.footer-grid{
-
-    display:grid;
-
-    grid-template-columns:2fr 1fr 1fr 1.5fr;
-
-    gap:50px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.11);
 
 }
 
 
-/*==============================================
-    FOOTER LOGO
-==============================================*/
+.product-card:hover::before {
 
-.footer-logo{
-
-    margin-bottom:25px;
-
-}
-
-.footer-logo img{
-
-    max-width:180px;
-
-}
-
-.footer-about p{
-
-    color:rgba(255,255,255,.75);
-
-    margin-bottom:25px;
+    transform: scaleX(1);
 
 }
 
 
-/*==============================================
-    FOOTER TITLES
-==============================================*/
+/*============================
+PRODUCT CARD TOP
+============================*/
 
-.footer-title{
+.product-card-top {
 
-    color:#fff;
+    position: relative;
 
-    font-size:22px;
+    display: flex;
 
-    margin-bottom:25px;
+    align-items: center;
 
-    position:relative;
+    justify-content: space-between;
 
-}
-
-.footer-title::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    bottom:-10px;
-
-    width:45px;
-
-    height:3px;
-
-    background:var(--secondary-color);
+    margin-bottom: 25px;
 
 }
 
 
-/*==============================================
-    LINKS
-==============================================*/
+.product-number {
 
-.footer-links{
+    font-size: 0.75rem;
 
-    display:flex;
+    font-weight: 800;
 
-    flex-direction:column;
+    letter-spacing: 1px;
 
-    gap:14px;
-
-}
-
-.footer-links a{
-
-    color:rgba(255,255,255,.70);
-
-    transition:.3s;
-
-}
-
-.footer-links a:hover{
-
-    color:var(--secondary-color);
-
-    padding-left:8px;
+    color: var(--secondary-color);
 
 }
 
 
-/*==============================================
-    CONTACT
-==============================================*/
+/*============================
+PRODUCT ICON
+============================*/
 
-.footer-contact{
+.product-icon {
 
-    display:flex;
+    width: 62px;
+    height: 62px;
 
-    flex-direction:column;
+    display: flex;
 
-    gap:18px;
+    align-items: center;
+    justify-content: center;
 
-}
+    border-radius: 14px;
 
-.footer-contact li{
+    background: rgba(15, 43, 71, 0.07);
 
-    display:flex;
+    color: var(--primary-color);
 
-    gap:15px;
-
-}
-
-.footer-contact i{
-
-    color:var(--secondary-color);
-
-    margin-top:5px;
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease;
 
 }
 
 
-/*==============================================
-    SOCIAL
-==============================================*/
+.product-icon i {
 
-.footer-social{
-
-    display:flex;
-
-    gap:15px;
-
-    margin-top:30px;
-
-}
-
-.footer-social a{
-
-    width:45px;
-
-    height:45px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.08);
-
-    color:#fff;
-
-    transition:.3s;
-
-}
-
-.footer-social a:hover{
-
-    background:var(--secondary-color);
-
-    color:var(--primary-color);
+    font-size: 1.35rem;
 
 }
 
 
+.product-card:hover .product-icon {
+
+    background: var(--primary-color);
+
+    color: #ffffff;
+
+    transform: rotate(-3deg) scale(1.05);
+
+}
+
+
+/*============================
+PRODUCT CONTENT
+============================*/
+
+.product-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+
+}
+
+
+.product-label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    color: var(--secondary-color);
+
+}
+
+
+.product-content h3 {
+
+    margin-bottom: 14px;
+
+    font-size: 1.2rem;
+
+    line-height: 1.35;
+
+    color: var(--primary-color);
+
+}
+
+
+.product-content p {
+
+    margin: 0;
+
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+
+    color: var(--text-light);
+
+}
+
+
+/*============================
+PRODUCT LINK
+============================*/
+
+.product-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: auto;
+    padding-top: 25px;
+
+    font-size: 0.88rem;
+
+    font-weight: 700;
+
+    color: var(--primary-color);
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        gap 0.3s ease;
+
+}
+
+
+.product-link i {
+
+    font-size: 0.75rem;
+
+}
+
+
+.product-link:hover {
+
+    color: var(--secondary-color);
+
+    gap: 13px;
+
+}
+
+
+/*============================
+PRODUCT CTA
+============================*/
+
+.products-action {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-top: 45px;
+
+    padding: 28px 35px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(15, 43, 71, 0.08);
+
+    border-radius: 16px;
+
+}
+
+
+.products-action-text span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    color: var(--secondary-color);
+
+}
+
+
+.products-action-text p {
+
+    margin: 0;
+
+    color: var(--text-light);
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+
+}
+
+
+.products-action .btn i {
+
+    margin-left: 8px;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.products-action .btn:hover i {
+
+    transform: translateX(5px);
+
+}
+
+/*=====================================================
+  INDUSTRIES WE SERVE
+=====================================================*/
+
+.industries {
+    position: relative;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+
+/*============================
+INDUSTRIES GRID
+============================*/
+
+.industries-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+
+    margin-top: 60px;
+
+}
+
+
+/*============================
+INDUSTRY CARD
+============================*/
+
+.industry-card {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    min-height: 170px;
+
+    padding: 28px;
+
+    background: var(--light-bg);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+
+}
+
+
+.industry-card:hover {
+
+    transform: translateY(-7px);
+
+    border-color: rgba(15, 43, 71, 0.15);
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+
+/*============================
+NUMBER
+============================*/
+
+.industry-number {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 18px;
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: var(--secondary-color);
+
+    opacity: 0.8;
+
+}
+
+
+/*============================
+ICON
+============================*/
+
+.industry-icon {
+
+    flex-shrink: 0;
+
+    width: 64px;
+
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    color: var(--primary-color);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease;
+
+}
+
+
+.industry-icon i {
+
+    font-size: 1.35rem;
+
+}
+
+
+.industry-card:hover .industry-icon {
+
+    background: var(--primary-color);
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+}
+
+
+/*============================
+CONTENT
+============================*/
+
+.industry-content {
+
+    padding-right: 20px;
+
+}
+
+
+.industry-content h3 {
+
+    margin: 0 0 8px;
+
+    font-size: 1.08rem;
+
+    line-height: 1.35;
+
+    color: var(--primary-color);
+
+}
+
+
+.industry-content p {
+
+    margin: 0;
+
+    font-size: 0.88rem;
+
+    line-height: 1.6;
+
+    color: var(--text-light);
+
+}
+
+
+/*============================
+ARROW
+============================*/
+
+.industry-arrow {
+
+    position: absolute;
+
+    right: 22px;
+
+    bottom: 20px;
+
+    font-size: 0.75rem;
+
+    color: var(--secondary-color);
+
+    opacity: 0;
+
+    transform: translateX(-5px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.industry-card:hover .industry-arrow {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+}
+
+
+/*============================
+RESPONSIVE
+============================*/
+
+@media (max-width: 1100px) {
+
+    .industries-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .industries {
+
+        padding-top: 70px;
+
+        padding-bottom: 70px;
+
+    }
+
+
+    .industries-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        margin-top: 45px;
+
+    }
+
+
+    .industry-card {
+
+        min-height: 145px;
+
+        padding: 24px;
+
+    }
+
+
+    .industry-icon {
+
+        width: 58px;
+
+        height: 58px;
+
+    }
+
+
+    .industry-content h3 {
+
+        font-size: 1rem;
+
+    }
+
+
+    .industry-content p {
+
+        font-size: 0.84rem;
+
+    }
+
+}
+/*=====================================================
+  CALL TO ACTION
+=====================================================*/
+
+.cta {
+
+    position: relative;
+
+    padding: 100px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-color),
+            #102b47
+        );
+
+    overflow: hidden;
+
+}
+
+
+/*=====================================================
+  CTA DECORATIVE ELEMENT
+=====================================================*/
+
+.cta::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: -250px;
+    right: -180px;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 50%;
+
+}
+
+
+.cta::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    bottom: -200px;
+    left: -150px;
+
+    border: 1px solid rgba(255,255,255,.06);
+
+    border-radius: 50%;
+
+}
+
+
+/*=====================================================
+  CTA WRAPPER
+=====================================================*/
+
+.cta-wrapper {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr .8fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+/*=====================================================
+  CTA CONTENT
+=====================================================*/
+
+.cta-content {
+
+    max-width: 760px;
+
+}
+
+
+.cta-content .section-tag {
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: var(--secondary-color);
+
+}
+
+
+.cta-content h2 {
+
+    margin-bottom: 22px;
+
+    color: var(--white);
+
+    font-size: clamp(
+        2rem,
+        4vw,
+        3.2rem
+    );
+
+    line-height: 1.15;
+
+}
+
+
+.cta-content h2 span {
+
+    display: block;
+
+    color: var(--secondary-color);
+
+}
+
+
+.cta-content p {
+
+    max-width: 700px;
+
+    margin-bottom: 32px;
+
+    color: rgba(255,255,255,.78);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+}
+
+
+/*=====================================================
+  CTA BUTTONS
+=====================================================*/
+
+.cta-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.cta-buttons .btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+}
+
+
+.cta-buttons .btn i {
+
+    transition:
+        transform .3s ease;
+
+}
+
+
+.cta-buttons .btn:hover i {
+
+    transform: translateX(5px);
+
+}
+
+
+/*=====================================================
+  CTA HIGHLIGHTS
+=====================================================*/
+
+.cta-highlights {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+
+}
+
+
+.cta-highlight {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px 22px;
+
+    background: rgba(255,255,255,.07);
+
+    border: 1px solid rgba(255,255,255,.10);
+
+    border-radius: 14px;
+
+    backdrop-filter: blur(8px);
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+
+}
+
+
+.cta-highlight:hover {
+
+    transform: translateX(-6px);
+
+    background: rgba(255,255,255,.11);
+
+}
+
+
+.cta-highlight > i {
+
+    flex-shrink: 0;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(212,160,23,.15);
+
+    color: var(--secondary-color);
+
+    font-size: 1.1rem;
+
+}
+
+
+.cta-highlight strong {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--white);
+
+    font-size: 1rem;
+
+}
+
+
+.cta-highlight span {
+
+    display: block;
+
+    color: rgba(255,255,255,.65);
+
+    font-size: .82rem;
+
+}
+
+
+/*=====================================================
+  CTA RESPONSIVE
+=====================================================*/
+
+@media (max-width: 991px) {
+
+    .cta-wrapper {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+    }
+
+    .cta-content {
+
+        max-width: 850px;
+
+    }
+
+    .cta-highlights {
+
+        display: grid;
+
+        grid-template-columns: repeat(3,1fr);
+
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .cta {
+
+        padding: 75px 0;
+
+    }
+
+    .cta-content h2 {
+
+        font-size: 2rem;
+
+    }
+
+    .cta-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+    .cta-buttons .btn {
+
+        width: 100%;
+
+    }
+
+    .cta-highlights {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .cta-highlight {
+
+        padding: 18px;
+
+    }
+
+}
+/*=====================================================
+  FOOTER
+=====================================================*/
+
+.footer {
+
+    position: relative;
+
+    background: var(--primary-color);
+
+    color: rgba(255,255,255,.75);
+
+    padding-top: 80px;
+
+}
+
+
+/*=====================================================
+  FOOTER GRID
+=====================================================*/
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.4fr .8fr 1fr 1.3fr;
+
+    gap: 55px;
+
+    padding-bottom: 60px;
+
+}
+
+
+/*=====================================================
+  FOOTER COMPANY
+=====================================================*/
+
+.footer-brand {
+
+    display: inline-flex;
+
+    margin-bottom: 22px;
+
+}
+
+
+.footer-logo {
+
+    width: 175px;
+
+    height: auto;
+
+    display: block;
+
+    border-radius: 8px;
+
+}
+
+
+.footer-description {
+
+    max-width: 390px;
+
+    margin: 0 0 22px;
+
+    font-size: .9rem;
+
+    line-height: 1.8;
+
+    color: rgba(255,255,255,.68);
+
+}
+
+
+.footer-tagline {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: .72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    color: var(--secondary-color);
+
+}
+
+
+.footer-tagline span {
+
+    color: rgba(255,255,255,.35);
+
+}
+
+
+/*=====================================================
+  FOOTER HEADINGS
+=====================================================*/
+
+.footer-column h3 {
+
+    position: relative;
+
+    margin: 0 0 25px;
+
+    padding-bottom: 12px;
+
+    color: var(--white);
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+}
+
+
+.footer-column h3::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 35px;
+
+    height: 2px;
+
+    background: var(--secondary-color);
+
+}
+
+
+/*=====================================================
+  FOOTER LINKS
+=====================================================*/
+
+.footer-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+
+}
+
+
+.footer-links a {
+
+    position: relative;
+
+    display: inline-flex;
+
+    color: rgba(255,255,255,.65);
+
+    font-size: .88rem;
+
+    text-decoration: none;
+
+    transition:
+        color .3s ease,
+        padding-left .3s ease;
+
+}
+
+
+.footer-links a::before {
+
+    content: "→";
+
+    position: absolute;
+
+    left: -18px;
+
+    opacity: 0;
+
+    color: var(--secondary-color);
+
+    transition:
+        opacity .3s ease,
+        left .3s ease;
+
+}
+
+
+.footer-links a:hover {
+
+    color: var(--secondary-color);
+
+    padding-left: 18px;
+
+}
+
+
+.footer-links a:hover::before {
+
+    left: 0;
+
+    opacity: 1;
+
+}
+
+
+/*=====================================================
+  FOOTER CONTACT
+=====================================================*/
+
+.footer-contact {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+
+}
+
+
+.footer-contact li {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+}
+
+
+.footer-contact-icon {
+
+    flex-shrink: 0;
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: rgba(255,255,255,.07);
+
+    color: var(--secondary-color);
+
+}
+
+
+.footer-contact li div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+
+.footer-contact strong {
+
+    color: var(--white);
+
+    font-size: .78rem;
+
+    font-weight: 700;
+
+}
+
+
+.footer-contact span {
+
+    font-size: .82rem;
+
+    line-height: 1.6;
+
+    color: rgba(255,255,255,.62);
+
+}
+
+
+.footer-contact a {
+
+    display: block;
+
+    color: rgba(255,255,255,.68);
+
+    font-size: .82rem;
+
+    text-decoration: none;
+
+    transition: color .3s ease;
+
+}
+
+
+.footer-contact a:hover {
+
+    color: var(--secondary-color);
+
+}
+
+
+/*=====================================================
+  FOOTER SERVICE STRIP
+=====================================================*/
+
+.footer-service-strip {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid rgba(255,255,255,.08);
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+}
+
+
+.footer-service-strip > div {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 18px 12px;
+
+    border-right: 1px solid rgba(255,255,255,.08);
+
+}
+
+
+.footer-service-strip > div:last-child {
+
+    border-right: none;
+
+}
+
+
+.footer-service-strip i {
+
+    color: var(--secondary-color);
+
+}
+
+
+.footer-service-strip span {
+
+    font-size: .76rem;
+
+    font-weight: 600;
+
+    color: rgba(255,255,255,.65);
+
+}
+
+
+/*=====================================================
+  FOOTER BOTTOM
+=====================================================*/
+
+.footer-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 25px 0;
+
+}
+
+
+.footer-bottom p {
+
+    margin: 0;
+
+    font-size: .78rem;
+
+    color: rgba(255,255,255,.5);
+
+}
+
+
+.footer-bottom p:last-child {
+
+    color: var(--secondary-color);
+
+    font-weight: 600;
+
+}
+
+
+/*=====================================================
+  FOOTER RESPONSIVE
+=====================================================*/
+
+@media (max-width: 1100px) {
+
+    .footer-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 45px;
+
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .footer {
+
+        padding-top: 60px;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding-bottom: 45px;
+
+    }
+
+
+    .footer-logo {
+
+        width: 155px;
+
+    }
+
+
+    .footer-service-strip {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .footer-service-strip > div:nth-child(2) {
+
+        border-right: none;
+
+    }
+
+
+    .footer-service-strip > div:nth-child(3),
+
+    .footer-service-strip > div:nth-child(4) {
+
+        border-top: 1px solid rgba(255,255,255,.08);
+
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 22px 0;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .footer-service-strip {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .footer-service-strip > div {
+
+        border-right: none;
+
+        border-bottom: 1px solid rgba(255,255,255,.08);
+
+    }
+
+
+    .footer-service-strip > div:last-child {
+
+        border-bottom: none;
+
+    }
+
+}
 /*==============================================
     COPYRIGHT
 ==============================================*/

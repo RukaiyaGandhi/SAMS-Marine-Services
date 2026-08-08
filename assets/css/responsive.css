@@ -629,3 +629,224 @@ margin-left:20px;
 }
 
 }
+/*=====================================================
+  PROCESS RESPONSIVE
+=====================================================*/
+
+@media (max-width: 1100px) {
+
+    .process-timeline {
+
+        grid-template-columns: repeat(3, 1fr);
+
+        row-gap: 60px;
+
+    }
+
+    .process-timeline::before {
+
+        display: none;
+
+    }
+
+}
+
+
+@media (max-width: 991px) {
+
+    .process-cta {
+
+        padding: 35px;
+
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .process {
+
+        padding-top: 70px;
+        padding-bottom: 70px;
+
+    }
+
+
+    .process-timeline {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        margin-top: 55px;
+
+    }
+
+
+    .process-step {
+
+        display: grid;
+
+        grid-template-columns: 80px 1fr;
+
+        gap: 20px;
+
+        text-align: left;
+
+        align-items: start;
+
+    }
+
+
+    .process-step-top {
+
+        height: 80px;
+
+        margin: 0;
+
+        justify-content: flex-start;
+
+    }
+
+
+    .process-icon {
+
+        width: 65px;
+        height: 65px;
+
+    }
+
+
+    .process-number {
+
+        top: -7px;
+        right: 0;
+
+    }
+
+
+    .process-content {
+
+        padding: 0;
+
+    }
+
+
+    .process-content h3 {
+
+        font-size: 1.1rem;
+
+    }
+
+
+    .process-content p {
+
+        font-size: 0.9rem;
+
+    }
+
+
+    .process-cta {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+
+        margin-top: 60px;
+
+        padding: 30px 25px;
+
+    }
+
+
+    .process-cta h3 {
+
+        font-size: 1.4rem;
+
+    }
+
+
+    .process-cta-action {
+
+        width: 100%;
+
+    }
+
+
+    .process-cta-action .btn {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+}
+/*=====================================================
+  PRODUCTS RESPONSIVE
+=====================================================*/
+
+@media (max-width: 1100px) {
+
+    .products-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .products {
+
+        padding-top: 70px;
+        padding-bottom: 70px;
+
+    }
+
+
+    .products-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        margin-top: 45px;
+
+    }
+
+
+    .product-card {
+
+        min-height: auto;
+
+        padding: 25px;
+
+    }
+
+
+    .products-action {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 25px;
+
+    }
+
+
+    .products-action .btn {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+}
