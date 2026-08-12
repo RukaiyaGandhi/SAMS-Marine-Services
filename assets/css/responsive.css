@@ -67,6 +67,42 @@
 
 }
 
+
+@media (max-width: 991px) {
+
+    .mobile-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        background: #fff;
+
+        padding: 20px;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+
+        transition: .3s ease;
+
+        box-shadow: var(--shadow-md);
+    }
+
+    .nav-menu.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+}
 /*==============================================
     1200px
 ==============================================*/
