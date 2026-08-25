@@ -322,3 +322,54 @@
     color: var(--secondary-dark);
 
 }
+
+/* =========================================================
+   CONTACT FORM STATUS MESSAGE
+   ========================================================= */
+
+#contactFormMessage {
+    display: none;
+    width: 100%;
+    margin: 20px 0;
+    padding: 15px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+
+/* SUCCESS MESSAGE */
+
+#contactFormMessage.success {
+    display: block !important;
+    background: #eaf7ef;
+    border: 1px solid #a8d8b8;
+    color: #176b36;
+}
+
+
+/* ERROR MESSAGE */
+
+#contactFormMessage.error {
+    display: block !important;
+    background: #fff1f1;
+    border: 1px solid #e5b4b4;
+    color: #a42626;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    #contactFormMessage {
+        margin: 16px 0;
+        padding: 13px 15px;
+        font-size: 14px;
+    }
+
+}
