@@ -18,14 +18,13 @@
 ========================================================= */
 
 const EMAILJS_PUBLIC_KEY =
-    "YOUR_PUBLIC_KEY";
+    "mFy55jI7u-3Ej7blf";
 
 const EMAILJS_SERVICE_ID =
-    "YOUR_SERVICE_ID";
+    "service_62z3x1q";
 
 const EMAILJS_TEMPLATE_ID =
-    "YOUR_TEMPLATE_ID";
-
+    "template_h9oh7ik";
 
 /* =========================================================
    SAMS EMAIL RECIPIENTS
