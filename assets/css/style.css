@@ -3108,6 +3108,222 @@ hr{
     transform: translateY(-8px) rotate(-45deg);
 }
 
+
+
+/* =========================================================
+   PROCUREMENT / NETWORK TRUST BAR
+========================================================= */
+
+.network-trust-bar {
+
+    width: 100%;
+
+    background: var(--primary-dark);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+
+}
+
+
+.network-trust-inner {
+
+    min-height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 0;
+
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.network-trust-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-right: 25px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    white-space: nowrap;
+
+}
+
+
+.network-trust-label i {
+
+    color: var(--secondary-color);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   NETWORK ID
+========================================================= */
+
+.network-id {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    min-height: 24px;
+
+    padding: 0 18px;
+
+    border-left: 1px solid rgba(255, 255, 255, 0.16);
+
+    white-space: nowrap;
+
+}
+
+
+.network-name {
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+.network-value {
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.network-id:hover .network-value {
+
+    color: var(--secondary-color);
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .network-trust-inner {
+
+        min-height: auto;
+
+        padding: 8px 0;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        row-gap: 6px;
+
+    }
+
+
+    .network-trust-label {
+
+        width: 100%;
+
+        justify-content: center;
+
+        margin-right: 0;
+
+        margin-bottom: 3px;
+
+        font-size: 10px;
+
+    }
+
+
+    .network-id {
+
+        padding: 0 10px;
+
+    }
+
+
+    .network-name {
+
+        font-size: 10px;
+
+    }
+
+
+    .network-value {
+
+        font-size: 10px;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .network-trust-inner {
+
+        padding: 9px 0;
+
+    }
+
+
+    .network-id {
+
+        padding: 0 7px;
+
+    }
+
+
+    .network-name {
+
+        font-size: 9px;
+
+    }
+
+
+    .network-value {
+
+        font-size: 9px;
+
+    }
+
+}
+
 /*==================================================
     END — SAMS MARINE SERVICES
 ==================================================*/
