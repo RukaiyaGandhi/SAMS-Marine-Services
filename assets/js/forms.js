@@ -21,7 +21,7 @@ const EMAILJS_PUBLIC_KEY =
     "mFy55jI7u-3Ej7blf";
 
 const EMAILJS_SERVICE_ID =
-    "service_62z3x1q";
+    "service_j2lzra8";
 
 const EMAILJS_TEMPLATE_ID =
     "template_h9oh7ik";
@@ -679,6 +679,10 @@ function clearFieldError(field) {
    FORM MESSAGE
 ========================================================= */
 
+/* =========================================================
+   FORM MESSAGE
+========================================================= */
+
 function showFormMessage(
     messageBox,
     message,
@@ -690,22 +694,59 @@ function showFormMessage(
     }
 
 
+    /*
+     * Set message text
+     */
+
     messageBox.textContent =
         message;
 
 
+    /*
+     * Reset classes
+     */
+
     messageBox.className =
-        "form-message " + type;
+        "form-message";
 
 
     /*
-     * Keep message visible
-     * without jumping the entire page.
+     * Add success / error class
      */
 
-    messageBox.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest"
-    });
+    messageBox.classList.add(
+        type
+    );
+
+
+    /*
+     * Force message visibility
+     */
+
+    messageBox.style.display =
+        "block";
+
+
+    messageBox.style.visibility =
+        "visible";
+
+
+    messageBox.style.opacity =
+        "1";
+
+
+    /*
+     * Scroll only enough to show
+     * the message if necessary.
+     */
+
+    setTimeout(function () {
+
+        messageBox.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+        });
+
+    }, 100);
 
 }

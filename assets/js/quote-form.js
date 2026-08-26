@@ -15,7 +15,7 @@ const EMAILJS_QUOTE_PUBLIC_KEY =
     "mFy55jI7u-3Ej7blf";
 
 const EMAILJS_QUOTE_SERVICE_ID =
-    "service_62z3x1q";
+    "service_j2lzra8";
 
 const EMAILJS_QUOTE_TEMPLATE_ID =
     "template_5ihi0gw";
