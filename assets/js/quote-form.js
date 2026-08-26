@@ -9,12 +9,12 @@
 
 /* =========================================================
    EMAILJS CONFIGURATION
-   ========================================================= */
+========================================================= */
 
-const EMAILJS_PUBLIC_KEY =
+const EMAILJS_QUOTE_PUBLIC_KEY =
     "mFy55jI7u-3Ej7blf";
 
-const EMAILJS_SERVICE_ID =
+const EMAILJS_QUOTE_SERVICE_ID =
     "service_62z3x1q";
 
 const EMAILJS_QUOTE_TEMPLATE_ID =
@@ -23,7 +23,7 @@ const EMAILJS_QUOTE_TEMPLATE_ID =
 
 /* =========================================================
    DOM READY
-   ========================================================= */
+========================================================= */
 
 document.addEventListener(
     "DOMContentLoaded",
@@ -37,19 +37,18 @@ document.addEventListener(
 
 /* =========================================================
    INITIALIZE REQUEST QUOTE FORM
-   ========================================================= */
+========================================================= */
 
 function initQuoteForm() {
 
     const form =
         document.getElementById(
-            "quoteForm"
+            "requestQuoteForm"
         );
 
 
     /*
-     * Request Quote form does not exist
-     * on this page.
+     * Form does not exist on this page
      */
 
     if (!form) {
@@ -58,7 +57,7 @@ function initQuoteForm() {
 
 
     /*
-     * Check EmailJS
+     * Check EmailJS library
      */
 
     if (
@@ -81,7 +80,7 @@ function initQuoteForm() {
     emailjs.init({
 
         publicKey:
-            EMAILJS_PUBLIC_KEY
+            EMAILJS_QUOTE_PUBLIC_KEY
 
     });
 
@@ -101,12 +100,21 @@ function initQuoteForm() {
         }
     );
 
+
+    /*
+     * Prevent normal browser submission
+     */
+
+    console.log(
+        "SAMS Marine Services: Request Quote form initialized."
+    );
+
 }
 
 
 /* =========================================================
    SEND REQUEST QUOTE
-   ========================================================= */
+========================================================= */
 
 function sendQuoteForm(form) {
 
@@ -120,6 +128,21 @@ function sendQuoteForm(form) {
         document.getElementById(
             "quoteFormMessage"
         );
+
+
+    /*
+     * Validate HTML required fields
+     */
+
+    if (
+        !form.checkValidity()
+    ) {
+
+        form.reportValidity();
+
+        return;
+
+    }
 
 
     /*
@@ -161,7 +184,7 @@ function sendQuoteForm(form) {
 
 
     /*
-     * Get form data
+     * Read form data
      */
 
     const formData =
@@ -169,7 +192,7 @@ function sendQuoteForm(form) {
 
 
     /*
-     * Get customer details
+     * Customer details
      */
 
     const name =
@@ -184,43 +207,127 @@ function sendQuoteForm(form) {
     const phone =
         formData.get("phone") || "";
 
-    const serviceRequired =
-        formData.get("service_required") || "";
 
-    const productRequired =
-        formData.get("product_required") || "";
+    /*
+     * Vessel details
+     */
+
+    const vessel =
+        formData.get("vessel") || "";
+
+    const vesselType =
+        formData.get("vessel_type") || "";
+
+    const port =
+        formData.get("port") || "";
+
+
+    /*
+     * Service details
+     */
+
+    const service =
+        formData.get("service") || "";
+
+
+    /*
+     * Compressor details
+     */
+
+    const compressorBrand =
+        formData.get("compressor_brand") || "";
+
+    const compressorModel =
+        formData.get("compressor_model") || "";
+
+
+    /*
+     * Product details
+     */
+
+    const product =
+        formData.get("product") || "";
+
+    const quantity =
+        formData.get("quantity") || "";
+
+    const requiredDate =
+        formData.get("required_date") || "";
+
+
+    /*
+     * Requirement message
+     */
 
     const message =
         formData.get("message") || "";
 
 
-    /*
-     * EmailJS template parameters
-     *
-     * These names must match the
-     * Request Quote EmailJS template.
-     */
+    /* =====================================================
+       EMAILJS TEMPLATE PARAMETERS
+    ===================================================== */
 
     const templateParams = {
 
-        name: name,
+        name:
+            name,
 
-        company: company,
+        company:
+            company,
 
-        email: email,
+        email:
+            email,
 
-        phone: phone,
+        phone:
+            phone,
 
-        service_required:
-            serviceRequired,
 
-        product_required:
-            productRequired,
+        vessel:
+            vessel,
 
-        message: message,
+        vessel_type:
+            vesselType,
+
+        port:
+            port,
+
+
+        service:
+            service,
+
+
+        compressor_brand:
+            compressorBrand,
+
+        compressor_model:
+            compressorModel,
+
+
+        product:
+            product,
+
+        quantity:
+            quantity,
+
+        required_date:
+            requiredDate,
+
+
+        message:
+            message,
+
+
+        /*
+         * Customer email becomes Reply-To
+         */
 
         reply_to:
             email,
+
+
+        /*
+         * Company information
+         */
 
         company_name:
             "SAMS Marine Services",
@@ -231,12 +338,17 @@ function sendQuoteForm(form) {
     };
 
 
-    /*
-     * Send through EmailJS
-     */
+    console.log(
+        "SAMS Marine Services: Sending quote request..."
+    );
+
+
+    /* =====================================================
+       SEND THROUGH EMAILJS
+    ===================================================== */
 
     emailjs.send(
-        EMAILJS_SERVICE_ID,
+        EMAILJS_QUOTE_SERVICE_ID,
         EMAILJS_QUOTE_TEMPLATE_ID,
         templateParams
     )
@@ -318,7 +430,7 @@ function sendQuoteForm(form) {
 
 /* =========================================================
    SHOW QUOTE FORM MESSAGE
-   ========================================================= */
+========================================================= */
 
 function showQuoteMessage(
     messageBox,
@@ -339,9 +451,16 @@ function showQuoteMessage(
         "form-message " + type;
 
 
+    /*
+     * Scroll message into view
+     */
+
     messageBox.scrollIntoView({
+
         behavior: "smooth",
+
         block: "nearest"
+
     });
 
 }
