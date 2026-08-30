@@ -9,13 +9,7 @@
 
 /* =========================================================
    EMAILJS CONFIGURATION
-   =========================================================
-
-   Replace these three values with the values
-   from your EmailJS account.
-
-   DO NOT change the variable names.
-========================================================= */
+   ========================================================= */
 
 const EMAILJS_PUBLIC_KEY =
     "mFy55jI7u-3Ej7blf";
@@ -26,9 +20,10 @@ const EMAILJS_SERVICE_ID =
 const EMAILJS_TEMPLATE_ID =
     "template_h9oh7ik";
 
+
 /* =========================================================
    SAMS EMAIL RECIPIENTS
-========================================================= */
+   ========================================================= */
 
 const SAMS_EMAILS = [
     "supply@samsmarineservices.in",
@@ -39,7 +34,7 @@ const SAMS_EMAILS = [
 
 /* =========================================================
    DOM READY
-========================================================= */
+   ========================================================= */
 
 document.addEventListener(
     "DOMContentLoaded",
@@ -53,33 +48,22 @@ document.addEventListener(
 
 /* =========================================================
    INITIALIZE CONTACT FORM
-========================================================= */
+   ========================================================= */
 
 function initContactForm() {
 
     const form =
-        document.getElementById(
-            "contactForm"
-        );
+        document.getElementById("contactForm");
 
-
-    /*
-     * Contact form does not exist
-     * on this page.
-     */
 
     if (!form) {
         return;
     }
 
 
-    /*
-     * Check EmailJS library
-     */
+    /* Check EmailJS */
 
-    if (
-        typeof emailjs === "undefined"
-    ) {
+    if (typeof emailjs === "undefined") {
 
         console.error(
             "SAMS Marine Services: EmailJS library was not loaded."
@@ -90,21 +74,14 @@ function initContactForm() {
     }
 
 
-    /*
-     * Initialize EmailJS
-     */
+    /* Initialize EmailJS */
 
     emailjs.init({
-
-        publicKey:
-            EMAILJS_PUBLIC_KEY
-
+        publicKey: EMAILJS_PUBLIC_KEY
     });
 
 
-    /*
-     * Submit event
-     */
+    /* Submit event */
 
     form.addEventListener(
         "submit",
@@ -118,40 +95,34 @@ function initContactForm() {
     );
 
 
-    /*
-     * Live field validation
-     */
+    /* Live validation */
 
     initContactValidation(form);
+
+
+    console.log(
+        "SAMS Marine Services: Contact form initialized."
+    );
 
 }
 
 
 /* =========================================================
    SEND CONTACT FORM
-========================================================= */
+   ========================================================= */
 
 function sendContactForm(form) {
 
     const submitButton =
-        document.getElementById(
-            "contactSubmit"
-        );
-
+        document.getElementById("contactSubmit");
 
     const messageBox =
-        document.getElementById(
-            "contactFormMessage"
-        );
+        document.getElementById("contactFormMessage");
 
 
-    /*
-     * Validate
-     */
+    /* Validate */
 
-    if (
-        !validateContactForm(form)
-    ) {
+    if (!validateContactForm(form)) {
 
         showFormMessage(
             messageBox,
@@ -164,9 +135,7 @@ function sendContactForm(form) {
     }
 
 
-    /*
-     * Save original button content
-     */
+    /* Save original button */
 
     const originalButtonContent =
         submitButton
@@ -174,9 +143,7 @@ function sendContactForm(form) {
             : "";
 
 
-    /*
-     * Loading state
-     */
+    /* Loading state */
 
     if (submitButton) {
 
@@ -188,9 +155,7 @@ function sendContactForm(form) {
     }
 
 
-    /*
-     * Clear previous message
-     */
+    /* Clear previous message */
 
     if (messageBox) {
 
@@ -202,17 +167,11 @@ function sendContactForm(form) {
     }
 
 
-    /*
-     * Create form data
-     */
+    /* Read form */
 
     const formData =
         new FormData(form);
 
-
-    /*
-     * Get customer details
-     */
 
     const name =
         formData.get("name") || "";
@@ -233,49 +192,35 @@ function sendContactForm(form) {
         formData.get("message") || "";
 
 
-    /*
-     * EmailJS template parameters
-     *
-     * These names must match your
-     * EmailJS template variables.
-     */
+    /* =====================================================
+       EMAILJS TEMPLATE PARAMETERS
+       ===================================================== */
 
     const templateParams = {
 
-        name: name,
+        name:
+            name,
 
-        company: company,
+        company:
+            company,
 
-        email: email,
+        email:
+            email,
 
-        phone: phone,
+        phone:
+            phone,
 
-        subject: subject,
+        subject:
+            subject,
 
-        message: message,
+        message:
+            message,
 
-
-        /*
-         * Customer email becomes Reply-To
-         */
-
-        reply_to: email,
-
-
-        /*
-         * All SAMS recipients
-         *
-         * Use this in your EmailJS
-         * template if required.
-         */
+        reply_to:
+            email,
 
         to_email:
             SAMS_EMAILS.join(", "),
-
-
-        /*
-         * Company identification
-         */
 
         company_name:
             "SAMS Marine Services",
@@ -289,9 +234,14 @@ function sendContactForm(form) {
     };
 
 
-    /*
-     * Send through EmailJS
-     */
+    console.log(
+        "SAMS Marine Services: Sending contact enquiry..."
+    );
+
+
+    /* =====================================================
+       SEND THROUGH EMAILJS
+       ===================================================== */
 
     emailjs.send(
         EMAILJS_SERVICE_ID,
@@ -309,10 +259,6 @@ function sendContactForm(form) {
             );
 
 
-            /*
-             * Success message
-             */
-
             showFormMessage(
                 messageBox,
                 "Thank you. Your enquiry has been sent successfully. Our team will contact you shortly.",
@@ -320,27 +266,15 @@ function sendContactForm(form) {
             );
 
 
-            /*
-             * Reset form
-             */
-
             form.reset();
 
 
-            /*
-             * Return focus to name field
-             */
-
             const nameField =
-                document.getElementById(
-                    "contactName"
-                );
+                document.getElementById("contactName");
 
 
             if (nameField) {
-
                 nameField.focus();
-
             }
 
         }
@@ -355,10 +289,6 @@ function sendContactForm(form) {
             );
 
 
-            /*
-             * Error message
-             */
-
             showFormMessage(
                 messageBox,
                 "Sorry, we could not send your enquiry right now. Please contact SAMS Marine Services directly by email or phone.",
@@ -370,10 +300,6 @@ function sendContactForm(form) {
 
     .finally(
         function () {
-
-            /*
-             * Restore button
-             */
 
             if (submitButton) {
 
@@ -393,30 +319,21 @@ function sendContactForm(form) {
 
 /* =========================================================
    VALIDATE CONTACT FORM
-========================================================= */
+   ========================================================= */
 
 function validateContactForm(form) {
 
     let valid = true;
 
-
     const requiredFields =
-        form.querySelectorAll(
-            "[required]"
-        );
+        form.querySelectorAll("[required]");
 
 
     requiredFields.forEach(
         function (field) {
 
-            const fieldValid =
-                validateField(field);
-
-
-            if (!fieldValid) {
-
+            if (!validateField(field)) {
                 valid = false;
-
             }
 
         }
@@ -430,7 +347,7 @@ function validateContactForm(form) {
 
 /* =========================================================
    VALIDATE INDIVIDUAL FIELD
-========================================================= */
+   ========================================================= */
 
 function validateField(field) {
 
@@ -438,16 +355,10 @@ function validateField(field) {
         field.value.trim();
 
 
-    /*
-     * Clear previous error
-     */
-
     clearFieldError(field);
 
 
-    /*
-     * Required field
-     */
+    /* Required */
 
     if (
         field.hasAttribute("required") &&
@@ -464,9 +375,7 @@ function validateField(field) {
     }
 
 
-    /*
-     * Email
-     */
+    /* Email */
 
     if (
         field.type === "email" &&
@@ -484,12 +393,7 @@ function validateField(field) {
     }
 
 
-    /*
-     * Phone
-     *
-     * Phone is optional on this form,
-     * so only validate when supplied.
-     */
+    /* Phone */
 
     if (
         field.type === "tel" &&
@@ -514,7 +418,7 @@ function validateField(field) {
 
 /* =========================================================
    EMAIL VALIDATION
-========================================================= */
+   ========================================================= */
 
 function isValidEmail(email) {
 
@@ -526,7 +430,7 @@ function isValidEmail(email) {
 
 /* =========================================================
    PHONE VALIDATION
-========================================================= */
+   ========================================================= */
 
 function isValidPhone(phone) {
 
@@ -545,7 +449,7 @@ function isValidPhone(phone) {
 
 /* =========================================================
    LIVE VALIDATION
-========================================================= */
+   ========================================================= */
 
 function initContactValidation(form) {
 
@@ -562,9 +466,7 @@ function initContactValidation(form) {
                 "input",
                 function () {
 
-                    clearFieldError(
-                        field
-                    );
+                    clearFieldError(field);
 
                 }
             );
@@ -575,15 +477,11 @@ function initContactValidation(form) {
                 function () {
 
                     if (
-                        field.hasAttribute(
-                            "required"
-                        ) ||
+                        field.hasAttribute("required") ||
                         field.value.trim()
                     ) {
 
-                        validateField(
-                            field
-                        );
+                        validateField(field);
 
                     }
 
@@ -598,7 +496,7 @@ function initContactValidation(form) {
 
 /* =========================================================
    SHOW FIELD ERROR
-========================================================= */
+   ========================================================= */
 
 function showFieldError(
     field,
@@ -610,31 +508,19 @@ function showFieldError(
     );
 
 
-    /*
-     * Look for an existing error
-     */
-
     let error =
         field.parentElement.querySelector(
             ".field-error"
         );
 
 
-    /*
-     * Create error element
-     */
-
     if (!error) {
 
         error =
-            document.createElement(
-                "small"
-            );
-
+            document.createElement("small");
 
         error.className =
             "field-error";
-
 
         field.parentElement.appendChild(
             error
@@ -651,7 +537,7 @@ function showFieldError(
 
 /* =========================================================
    CLEAR FIELD ERROR
-========================================================= */
+   ========================================================= */
 
 function clearFieldError(field) {
 
@@ -667,9 +553,7 @@ function clearFieldError(field) {
 
 
     if (error) {
-
         error.remove();
-
     }
 
 }
@@ -677,11 +561,7 @@ function clearFieldError(field) {
 
 /* =========================================================
    FORM MESSAGE
-========================================================= */
-
-/* =========================================================
-   FORM MESSAGE
-========================================================= */
+   ========================================================= */
 
 function showFormMessage(
     messageBox,
@@ -694,59 +574,39 @@ function showFormMessage(
     }
 
 
-    /*
-     * Set message text
-     */
-
     messageBox.textContent =
         message;
 
 
-    /*
-     * Reset classes
-     */
-
     messageBox.className =
         "form-message";
 
-
-    /*
-     * Add success / error class
-     */
 
     messageBox.classList.add(
         type
     );
 
 
-    /*
-     * Force message visibility
-     */
-
     messageBox.style.display =
         "block";
 
-
     messageBox.style.visibility =
         "visible";
-
 
     messageBox.style.opacity =
         "1";
 
 
-    /*
-     * Scroll only enough to show
-     * the message if necessary.
-     */
+    setTimeout(
+        function () {
 
-    setTimeout(function () {
+            messageBox.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest"
+            });
 
-        messageBox.scrollIntoView({
-            behavior: "smooth",
-            block: "nearest"
-        });
-
-    }, 100);
+        },
+        100
+    );
 
 }

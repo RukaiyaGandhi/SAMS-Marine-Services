@@ -9,7 +9,7 @@
 
 /* =========================================================
    EMAILJS CONFIGURATION
-========================================================= */
+   ========================================================= */
 
 const EMAILJS_QUOTE_PUBLIC_KEY =
     "mFy55jI7u-3Ej7blf";
@@ -22,8 +22,19 @@ const EMAILJS_QUOTE_TEMPLATE_ID =
 
 
 /* =========================================================
+   SAMS EMAIL RECIPIENTS
+   ========================================================= */
+
+const SAMS_QUOTE_EMAILS = [
+    "supply@samsmarineservices.in",
+    "agency@samsmarineservices.in",
+    "workshop@samsmarineservices.in"
+];
+
+
+/* =========================================================
    DOM READY
-========================================================= */
+   ========================================================= */
 
 document.addEventListener(
     "DOMContentLoaded",
@@ -37,7 +48,7 @@ document.addEventListener(
 
 /* =========================================================
    INITIALIZE REQUEST QUOTE FORM
-========================================================= */
+   ========================================================= */
 
 function initQuoteForm() {
 
@@ -47,22 +58,14 @@ function initQuoteForm() {
         );
 
 
-    /*
-     * Form does not exist on this page
-     */
-
     if (!form) {
         return;
     }
 
 
-    /*
-     * Check EmailJS library
-     */
+    /* Check EmailJS */
 
-    if (
-        typeof emailjs === "undefined"
-    ) {
+    if (typeof emailjs === "undefined") {
 
         console.error(
             "SAMS Marine Services: EmailJS library was not loaded."
@@ -73,21 +76,15 @@ function initQuoteForm() {
     }
 
 
-    /*
-     * Initialize EmailJS
-     */
+    /* Initialize EmailJS */
 
     emailjs.init({
-
         publicKey:
             EMAILJS_QUOTE_PUBLIC_KEY
-
     });
 
 
-    /*
-     * Submit event
-     */
+    /* Submit event */
 
     form.addEventListener(
         "submit",
@@ -101,10 +98,6 @@ function initQuoteForm() {
     );
 
 
-    /*
-     * Prevent normal browser submission
-     */
-
     console.log(
         "SAMS Marine Services: Request Quote form initialized."
     );
@@ -114,7 +107,7 @@ function initQuoteForm() {
 
 /* =========================================================
    SEND REQUEST QUOTE
-========================================================= */
+   ========================================================= */
 
 function sendQuoteForm(form) {
 
@@ -130,13 +123,9 @@ function sendQuoteForm(form) {
         );
 
 
-    /*
-     * Validate HTML required fields
-     */
+    /* Validate */
 
-    if (
-        !form.checkValidity()
-    ) {
+    if (!form.checkValidity()) {
 
         form.reportValidity();
 
@@ -145,9 +134,7 @@ function sendQuoteForm(form) {
     }
 
 
-    /*
-     * Save original button
-     */
+    /* Save original button */
 
     const originalButtonContent =
         submitButton
@@ -155,9 +142,7 @@ function sendQuoteForm(form) {
             : "";
 
 
-    /*
-     * Loading state
-     */
+    /* Loading state */
 
     if (submitButton) {
 
@@ -169,9 +154,7 @@ function sendQuoteForm(form) {
     }
 
 
-    /*
-     * Clear previous message
-     */
+    /* Clear previous message */
 
     if (messageBox) {
 
@@ -183,17 +166,13 @@ function sendQuoteForm(form) {
     }
 
 
-    /*
-     * Read form data
-     */
+    /* Read form */
 
     const formData =
         new FormData(form);
 
 
-    /*
-     * Customer details
-     */
+    /* Customer */
 
     const name =
         formData.get("name") || "";
@@ -208,9 +187,7 @@ function sendQuoteForm(form) {
         formData.get("phone") || "";
 
 
-    /*
-     * Vessel details
-     */
+    /* Vessel */
 
     const vessel =
         formData.get("vessel") || "";
@@ -222,17 +199,13 @@ function sendQuoteForm(form) {
         formData.get("port") || "";
 
 
-    /*
-     * Service details
-     */
+    /* Service */
 
     const service =
         formData.get("service") || "";
 
 
-    /*
-     * Compressor details
-     */
+    /* Compressor */
 
     const compressorBrand =
         formData.get("compressor_brand") || "";
@@ -241,9 +214,7 @@ function sendQuoteForm(form) {
         formData.get("compressor_model") || "";
 
 
-    /*
-     * Product details
-     */
+    /* Product */
 
     const product =
         formData.get("product") || "";
@@ -255,9 +226,7 @@ function sendQuoteForm(form) {
         formData.get("required_date") || "";
 
 
-    /*
-     * Requirement message
-     */
+    /* Message */
 
     const message =
         formData.get("message") || "";
@@ -265,7 +234,7 @@ function sendQuoteForm(form) {
 
     /* =====================================================
        EMAILJS TEMPLATE PARAMETERS
-    ===================================================== */
+       ===================================================== */
 
     const templateParams = {
 
@@ -317,17 +286,19 @@ function sendQuoteForm(form) {
             message,
 
 
-        /*
-         * Customer email becomes Reply-To
-         */
+        /* Customer email = Reply-To */
 
         reply_to:
             email,
 
 
-        /*
-         * Company information
-         */
+        /* All SAMS recipients */
+
+        to_email:
+            SAMS_QUOTE_EMAILS.join(", "),
+
+
+        /* Company */
 
         company_name:
             "SAMS Marine Services",
@@ -345,7 +316,7 @@ function sendQuoteForm(form) {
 
     /* =====================================================
        SEND THROUGH EMAILJS
-    ===================================================== */
+       ===================================================== */
 
     emailjs.send(
         EMAILJS_QUOTE_SERVICE_ID,
@@ -363,20 +334,12 @@ function sendQuoteForm(form) {
             );
 
 
-            /*
-             * Success message
-             */
-
             showQuoteMessage(
                 messageBox,
                 "Thank you. Your quote request has been sent successfully. Our team will contact you shortly.",
                 "success"
             );
 
-
-            /*
-             * Reset form
-             */
 
             form.reset();
 
@@ -392,10 +355,6 @@ function sendQuoteForm(form) {
             );
 
 
-            /*
-             * Error message
-             */
-
             showQuoteMessage(
                 messageBox,
                 "Sorry, we could not send your quote request right now. Please contact SAMS Marine Services directly by email or phone.",
@@ -407,10 +366,6 @@ function sendQuoteForm(form) {
 
     .finally(
         function () {
-
-            /*
-             * Restore button
-             */
 
             if (submitButton) {
 
@@ -430,7 +385,7 @@ function sendQuoteForm(form) {
 
 /* =========================================================
    SHOW QUOTE FORM MESSAGE
-========================================================= */
+   ========================================================= */
 
 function showQuoteMessage(
     messageBox,
@@ -450,10 +405,6 @@ function showQuoteMessage(
     messageBox.className =
         "form-message " + type;
 
-
-    /*
-     * Scroll message into view
-     */
 
     messageBox.scrollIntoView({
 
